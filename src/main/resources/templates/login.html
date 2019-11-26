@@ -8,35 +8,31 @@
 </head>
 <title>HELLO WORLD</title>
 
-<head> </head>
+<head></head>
 
 <body>
 <div class="jumbotron">
     <div class="container">
-
-        <ul class="nav nav-pills">
-            <li role="presentation" class="active"><a href="">Home</a></li>
-            <li role="presentation"><a href="#">Administrator</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
-        </ul>
 
         <h1>My first Blog</h1>
         <div align="center">
 
 
             <form action='login' method="post">
-<div>
-        <label>Username:</label>
-    <input type="text"id="=userId" name="userId" placeholder="user name" class="form-control" th:field="${user.username}"/>
-</div>
+                <div>
+                    <label>Username:</label>
+                    <input type="text" id="=userId" name="userId" placeholder="user name" class="form-control"
+                           th:field="${user.username}"/>
+                </div>
 
-<div>
-    <label>Password:</label>
-    <input type="password" id="password" name="password" placeholder="password" class="form-control" th:field="${user.password}"/>
-</div>
+                <div>
+                    <label>Password:</label>
+                    <input type="password" id="password" name="password" placeholder="password" class="form-control"
+                           th:field="${user.password}"/>
+                </div>
                 <button id="loginButton" class="form-control">Login</button>
 
-                </form>
+            </form>
 
         </div>
     </div>

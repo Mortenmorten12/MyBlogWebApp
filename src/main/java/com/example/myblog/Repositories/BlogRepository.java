@@ -26,7 +26,7 @@ public class BlogRepository {
     public int save(BlogPost blogPost) {
 
         return jdbcTemplate.update(
-                "insert into posts (content) values(?,?)",
+                "insert into posts (content) values(?)",
                 blogPost.getContent());
     }
 
