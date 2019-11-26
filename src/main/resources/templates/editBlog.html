@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Edit</title>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+</head>
+
+<body>
+<div align="center">
+<div class="container">
+    <form th:method="Put" th:action="@{/editBlog}" th:object="${admin}">
+
+        <input type="hidden" th:field="${admin.adminId}"/>
+        <h1>Edit your blog</h1>
+        <textarea type="text" rows="10" cols="50" th:field="${admin.adminText}"/>
+<br>
+        <input class="btn btn-success btn-lg" type="submit" input="button" value="Submit">
+
+    </form>
+</div>
+</div>
+
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+</body>
+
+</html>

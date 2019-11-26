@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Edit</title>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Edit student with id: <span th:text="${user.userId}"></span></h1>
+
+    <form th:method="Put" th:action="@{/update}" th:object="${user}">
+        <input type="hidden" th:field="${user.userId}"/>
+        <p>Enter first name</p>
+        <input type="text" th:field="${user.firstName}"/>
+        <p>Enter last name</p>
+        <input type="text" th:field="${user.lastName}"/>
+        <p>Enter email</p>
+        <input type="text" th:field="${user.email}"/>
+        <p>Enter date registered</p>
+        <input type="date" th:field="${user.date}"/>
+
+        <input class="btn btn-success btn-lg" type="submit" input="button" value="Submit">
+
+    </form>
+
+</div>
+
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+</body>
+
+</html>

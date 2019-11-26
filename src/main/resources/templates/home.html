@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="ISO-8859-1">
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+
+    <title>Login Page</title>
+</head>
+<body>
+<div class="jumbotron">
+    <div class="container">
+
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="">Home</a></li>
+            <li role="presentation"><a href="/admin">Administrator</a></li>
+            <li role="presentation"><a href="#">Contact</a></li>
+        </ul>
+        <div align="center">
+        <h1>THE ULTIMATE BLOG</h1>
+        <p>This page is under construction</p>
+            <h2 th:text="${admin.adminId}"></h2>
+            <h2 th:text="${admin.adminText}"></h2>
+
+        <IMG SRC="conor.gif">
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+</body>
+</html>

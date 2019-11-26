@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="ISO-8859-1">
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+
+    <title>Login Page</title>
+</head>
+<title>HELLO WORLD</title>
+
+<head></head>
+
+<body>
+<div class="jumbotron">
+    <div class="container">
+
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="localhost:5000/index">Home</a></li>
+            <li role="presentation"><a href="/admin">Administrator</a></li>
+            <li role="presentation"><a href="/blog/0">Blog</a></li>
+        </ul>
+        <div align="center">
+            <h1>THE ULTIMATE BLOG</h1>
+        </div>
+        <h2></h2>
+        <p>
+            "Arguing that you don't care about the right to privacy because you have nothing to hide is no different
+            than saying you don't care about free speech because you have nothing to say."
+        <div></div>
+        - Edward Snowden  </p>
+        <div align="center">
+
+            <p th:if="${invalidCredentials}" class="error">Invalid Username/Password</p>
+            <form th:action="@{/index}" th:object="${users}" method="post">
+                <tr>
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3"
+                               id="username" name="username" autofocus="autofocus"/>
+                    </div>
+                </tr>
+                <tr>
+                    <div class="input-group input-group-lg">
+                        <input type="password" class="form-control" placeholder="Password"
+                               aria-describedby="sizing-addon3" id="password" name="password" autofocus="autofocus"/>
+                    </div>
+                </tr>
+                <h4></h4>
+                <tr>
+                    <td><input class="btn btn-primary btn-lg" type="submit" input="button" value="Log in"></td>
+                </tr>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+</body>
+</html>

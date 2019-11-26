@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+
+    <title>Details</title>
+</head>
+<body>
+<div class="jumbotron">
+    <div class="container">
+        <div align="center">
+
+            <h1>THE ULTIMATE BLOG</h1>
+            <h3>SECTION ONE</h3>
+            <br>
+
+            <p th:text="${admin.adminText}"></p>
+
+        </div>
+    </div>
+</div>
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+</body>
+</html>

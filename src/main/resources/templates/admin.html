@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="ISO-8859-1">
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+
+    <title>Blog Administration</title>
+</head>
+<title>HELLO WORLD</title>
+
+<head> </head>
+
+<body>
+<div class="jumbotron">
+    <div class="container">
+
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="/index">Home</a></li>
+            <li role="presentation"><a href="/editBlog/0">Edit Blog</a></li>
+            <li role="presentation"><a href="blog/0">Blog</a></li>
+        </ul>
+
+
+        <div align="center">
+            <h1>Administration/Management</h1>
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th>user Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Date registered</th>
+                    <th>Settings</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr th:each="user: ${users}">
+                    <td th:text="${user.userId}"/>
+                    <td th:text="${user.firstName}"/>
+                    <td th:text="${user.lastName}"/>
+                    <td th:text="${user.email}"/>
+                    <td th:text="${user.date}"/>
+                    <td>
+                        <a class="glyphicon glyphicon-cog" th:href="${'details/' + user.userId}"/>
+                        <a class="glyphicon glyphicon-pencil" th:href="${'update/' + user.userId}"/>
+                        <a class="glyphicon glyphicon-remove" th:href="${'delete/' + user.userId}"/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+</body>
+</html>
